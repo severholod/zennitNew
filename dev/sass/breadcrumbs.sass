@@ -1,0 +1,18 @@
+.breadcrumbs
+    &__list
+        list-style-type: none
+    &__item
+        display: inline-block
+        font-weight: 400
+        font-size: 14px
+        color: $text_gray
+        a
+            text-decoration: underline
+            &:hover
+                text-decoration: none
+        &+.breadcrumbs__item::before
+            color: $text_gray
+            content: '-'
+            padding: 0 7px
+        &_active
+            color: $black

@@ -1,0 +1,41 @@
+.offer2
+    padding: 67px 0 80px
+    position: relative
+    z-index: 1
+    &-item
+        display: flex
+        align-items: flex-end
+        background-position: center
+        background-size: cover
+        height: 325px
+        padding: 25px
+        border-radius: 1px 10px
+        &__title
+            font-weight: 500
+            font-size: 17px
+            color: #fff
+        &::after
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 17.64%, rgba(0, 0, 0, 0) 63.69%)
+            border-radius: 1px 10px
+            transform: rotate(180deg)
+    &-text
+        margin-bottom: 40px
+        p
+            font-size: 15px
+            color: $text_gray
+            margin-bottom: 15px
+    &-button
+        text-align: right
+        .btn
+            width: 260px
+    &::after
+        display: block
+        content: ''
+        width: 339px
+        height: 163px
+        background: url(../img/offer/bg.png) center no-repeat
+        background-size: contain
+        position: absolute
+        top: 70px
+        right: 255px
+        z-index: -1

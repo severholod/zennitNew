@@ -1,0 +1,29 @@
+.info
+    padding: 80px 0
+    background: $section-bg
+    &__video
+        height: 100%
+        padding-right: 40px
+    &__text
+        font-size: 15px
+        color: $text_gray
+        overflow: hidden
+        transition: height .3s linear
+        p
+            font-size: inherit
+    &__readmore
+        font-weight: 500
+        font-size: 11px
+        text-decoration: underline
+        text-transform: uppercase
+        color: $text_blue
+        padding-top: 15px
+        display: inline-block
+@media(min-width: 768px)
+    .info
+        &__text
+            height: auto !important
+        &__readmore
+            display: none
+    .solution__text
+        height: auto !important

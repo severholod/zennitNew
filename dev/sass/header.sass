@@ -1,0 +1,68 @@
+.top
+    padding: 12px 0
+    border-bottom: 1px solid #E9EAE8
+    margin-bottom: 71px
+    &-contacts
+        display: flex
+        &__phone
+            margin-right: 20px
+            color: $black
+            font-size: 19px
+            img
+                margin-right: 10px
+        &__soc a
+            margin-left: 20px
+            &:hover
+                text-decoration: none
+                path
+                    fill: $elem_blue
+                    transition: fill .25s ease
+.header
+    padding: 10px 0
+    position: fixed
+    top: 53px
+    transition: top .1s linear
+    width: 100%
+    z-index: 10
+    background: #fff
+    &.scroll
+        top: 0
+        box-shadow: 0 0 20px hsla(0,0%,68%,.3)
+    &__button
+        .btn
+            height: 41px
+    &-logo
+        img
+            max-width: 100%
+.nav
+    padding-left: 100px
+    padding-right: 15px
+    &__list
+        list-style: none
+        display: flex
+        justify-content: space-between
+    &__item
+        color: $black
+        font-weight: 500
+        font-size: 15px
+        text-transform: uppercase
+        padding: 0 10px
+        position: relative
+        a
+            &:hover
+                text-decoration: none
+        &::after
+            display: block
+            content: ''
+            width: 100%
+            height: 4px
+            background: $elem_blue
+            opacity: 0
+            visibility: hidden
+            transition: opacity .3s ease-in-out
+            position: absolute
+            left: 0
+            bottom: -24px
+        &:hover::after
+            opacity: 1
+            visibility: visible

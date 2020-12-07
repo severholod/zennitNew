@@ -1,0 +1,81 @@
+.reviews
+    background: $section-bg
+    padding: 80px 0
+    &-video
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        &__item
+            padding: 30px
+            background: #FFFFFF
+            border-radius: 1px
+            iframe
+                height: 246px
+    &-nav
+        margin-top: 45px
+    &-tabs
+        display: flex
+        margin-top: 45px
+        &__item
+            width: 70px
+            height: 70px
+            flex-shrink: 0
+            overflow: hidden
+            border: 3px solid transparent
+            transition: border .25s ease
+            border-radius: 100%
+            margin-right: 12px
+            cursor: pointer
+            img
+                max-width: 100%
+                filter: grayscale(100%)
+                transition: filter .25s ease
+            &.tabs-item_active
+                border: 3px solid $elem_blue
+                img
+                    filter: grayscale(0)
+    .slider-arrows
+        margin-top: 50px
+        justify-content: flex-end
+    .programs-review
+        height: auto
+        .program__content
+            margin-bottom: 0
+        &__logo img
+            max-height: 61px
+        &__text
+            font-size: 20px
+.reviews-prizyv
+    .review__photo
+        img
+            height: 253px
+.review
+    padding: 30px
+    background: #FFFFFF
+    box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+    border-radius: 1px
+    display: none
+    &.tab-content_active
+        display: flex
+    &__photo
+        flex-shrink: 0
+        margin-right: 20px
+        img
+            max-width: 100%
+    &__text
+        overflow: hidden
+        padding-right: 30px
+    &__name
+        font-weight: 500
+        font-size: 19px
+        color: $black
+        margin-bottom: 14px
+    &__descr
+        font-size: 15px
+        line-height: 23px
+        color: $text_gray
+        max-height: 210px
+        overflow: hidden
+    &__letter
+        flex-shrink: 0
+        text-align: center
+        img
+            width: 190px

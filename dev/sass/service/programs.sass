@@ -1,0 +1,128 @@
+.programs
+    padding: 65px 0
+    background: url(../img/programs/bg.jpg) center no-repeat
+    background-size: cover
+    position: relative
+    z-index: 1
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba(211, 212, 211, 0.3)
+        z-index: -1
+    &-review
+        padding-top: 47px
+        &__logo
+            margin-bottom: 40px
+            img
+                max-width: 100%
+        &__stars
+            margin-bottom: 15px
+            span
+                margin-left: 12px
+                font-weight: 500
+                font-size: 15px
+                color: $black
+        &__link
+            margin-bottom: 27px
+            a
+                font-size: 16px
+        &__text
+            font-weight: 500
+            font-size: 21px
+            color: $black
+    &-check
+        display: flex
+        margin-bottom: 50px
+        align-items: center
+        &__item
+            display: flex
+            align-items: center
+            margin-right: 55px
+            &-icon
+                width: 29px
+                height: 29px
+                border: 2.5px solid $text_blue
+                background: url(../img/programs/check.png) center no-repeat
+                margin-right: 12px
+                border-radius: 100%
+                flex-shrink: 0
+            &-text
+                font-size: 17px
+                color: $black
+.program
+    background: #FFFFFF
+    box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+    border-radius: 5px
+    padding: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: calc(100% - 30px)
+    margin-bottom: 30px
+    &__content
+        margin-bottom: 25px
+    &__head
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+        margin-bottom: 9px
+        z-index: 1
+        &::after
+            display: block
+            content: ''
+            width: calc(100% + 60px)
+            height: 1px
+            background: #E9EAE8
+            position: absolute
+            left: -30px
+            bottom: 14px
+            z-index: -1
+        &::before
+            display: block
+            content: ''
+            width: 105px
+            height: 4px
+            background-color: $elem_blue
+            position: absolute
+            left: 0
+            bottom: 12.5px
+    &__title
+        font-size: 24px
+        color: $black
+        padding-right: 10px
+        padding-bottom: 25px
+    &__icon
+        flex-shrink: 0
+    &__price
+        font-size: 24px
+        color: $black
+        margin-bottom: 20px
+        span
+            display: block
+            text-transform: uppercase
+            color: $text_gray
+            font-size: 14px
+            font-weight: 300
+            margin-bottom: 3px
+    &__list
+        padding-left: 15px
+        list-style-image: url(../img/programs/check.png)
+        li
+            padding: 5px 0
+            font-size: 15px
+            color: $text_gray
+    &__button
+        text-align: right
+    &__info
+        font-size: 15px
+        font-weight: 300
+        font-style: italic
+        color: $text_gray
+        margin: 10px 0
+        padding-left: 15px

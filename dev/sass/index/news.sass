@@ -1,0 +1,123 @@
+.news
+    padding: 65px 0 50px
+    &-item
+        background-position: center
+        background-size: cover
+        padding: 20px
+        margin-bottom: 25px
+        height: calc(100% - 25px)
+        &_big
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            color: #fff
+            padding: 35px
+            margin-bottom: 0
+        &_white
+            color: $black
+            background: #FFF
+            box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+            border-radius: 1px
+            .news-item__link
+                color: $elem_blue
+        &_with-img
+            color: #fff
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__title
+            font-weight: 500
+            font-size: 20px
+            line-height: 25px
+        &__text
+            font-weight: 300
+            font-size: 15px
+            color: $text_gray
+            margin: 10px 0
+        &__link
+            text-align: right
+            font-weight: 500
+            font-size: 13px
+            text-transform: uppercase
+            padding-left: 40px
+            a
+                text-decoration: underline
+                &:hover
+                    text-decoration: none
+.news-page
+    padding-top: 27px
+    padding-bottom: 65px
+    background-color: $section-bg
+.news-list
+    padding-top: 45px
+    overflow: hidden
+    &__item
+        background: #FFFFFF
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        border-radius: 1px
+        margin-bottom: 30px
+        &-photo
+            img
+                max-width: 100%
+        &-text
+            padding: 17px
+        &-title
+            font-weight: 500
+            font-size: 20px
+            line-height: 25px
+            color: $black
+            margin-bottom: 15px
+        &-descr
+            overflow: hidden
+            font-weight: 300
+            font-size: 15px
+            color: $text_gray
+        &-link
+            text-align: right
+            .link
+                background: #F6F6F6
+                height: 44px
+                width: 145px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                position: relative
+                transition: all .25s ease
+                &::before
+                    content: ''
+                    display: block
+                    border-right: 22px solid transparent
+                    border-top: 44px solid #fff
+                    position: absolute
+                    left: 0
+                    top: 0
+        &:hover .news-list__item-link .link
+            background: $light_blue
+            color: #fff
+            text-decoration: none
+    .row
+        position: relative
+        z-index: 1
+        &::before
+            display: block
+            content: ''
+            width: 348px
+            height: 208px
+            background: url(../img/news/dots1.png) center no-repeat
+            background-size: contain
+            position: absolute
+            right: -45px
+            top: -85px
+            z-index: -1
+
+        &::after
+            display: block
+            content: ''
+            width: 207px
+            height: 350px
+            background: url(../img/news/dots2.png) center no-repeat
+            background-size: contain
+            position: absolute
+            left: -95px
+            bottom: 200px
+            z-index: -1

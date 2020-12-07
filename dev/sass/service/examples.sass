@@ -1,0 +1,95 @@
+.examples
+    padding: 60px 0
+    background: #fff
+    .slider-arrows
+        justify-content: flex-end
+        margin-top: 50px
+        padding-right: 15px
+    .section-title
+        padding-left: 15px
+.example
+    display: flex
+    justify-content: space-between
+    background: #FFFFFF
+    box-shadow: 0px 0px 10px rgba(173, 173, 173, 0.4)
+    border-radius: 1px
+    padding: 15px
+    margin: 10px 15px
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 7px 0
+    &__doc
+        flex-direction: column
+    &__name
+        font-weight: 500
+        font-size: 19px
+        color: $black
+        margin-bottom: 17px
+    &__list
+        list-style-type: none
+        li
+            font-size: 15px
+            color: $text_gray
+            margin-bottom: 12px
+            span
+                font-weight: 500
+                color: $black
+    &__link
+        .link
+            font-size: 12px
+.example2
+    padding: 15px 15px 0
+    &__content
+        background: #FFFFFF
+        box-shadow: 0px 0px 15px rgba(173, 173, 173, 0.4)
+        border-radius: 5px
+        margin-bottom: 25px
+    &__head
+        border-bottom: 1px solid #E9EAE8
+        padding: 15px 30px
+    &__title
+        font-size: 21px
+        color: $black
+    &__info
+        padding: 20px 30px 25px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        span
+            font-weight: 300
+            font-size: 17px
+            color: $text_gray
+    &__doc
+        padding: 0 50px 30px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        &::after
+            content: ''
+            width: 24px
+            height: 16px
+            margin-left: 20px
+            background: url(../img/examples/arrow.png) center no-repeat
+            background-size: contain
+.zoom-img
+    position: relative
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: rgba(194, 194, 194, 0.4)
+        background-image: url(../img/icons/search-white.png)
+        background-repeat: no-repeat
+        background-position: center
+        z-index: 2
+        opacity: 0
+        transition: opacity .25s ease
+    &:hover::after
+        opacity: 1

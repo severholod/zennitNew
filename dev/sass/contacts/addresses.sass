@@ -1,0 +1,52 @@
+.addresses
+    padding: 57px 0 45px
+    background-color: #fff
+    .section-title
+        margin-bottom: 25px
+    &__subtitle
+        margin-bottom: 50px
+        font-weight: 300
+        color: $black
+    &-item
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background: #FFFFFF
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        border-radius: 1px
+        margin-bottom: 30px
+        height: calc(100% - 30px)
+        padding: 22px
+        &__content
+            margin-bottom: 20px
+        &__title
+            font-weight: 500
+            font-size: 19px
+            color: $black
+            margin-bottom: 10px
+        &__address
+            font-weight: 300
+            font-size: 15px
+            color: $text_gray
+        &__phone
+            font-size: 19px
+            color: $black
+            a
+                &:hover
+                    text-decoration: underline
+        &.map-info
+            height: 150px
+            width: 300px
+            position: relative
+            $trX: -20px
+            $trY: calc(-100% - 15px)
+            transform: translate($trX, $trY)
+            &::after
+                content: ''
+                display: block
+                border-top: 30px solid #FFFFFF
+                border-left: 20px solid transparent
+                border-right: 20px solid transparent
+                position: absolute
+                bottom: -15px
+                left: 0

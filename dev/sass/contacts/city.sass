@@ -1,0 +1,73 @@
+.contacts
+    padding-top: 27px
+    background: rgba(211, 212, 211, 0.2)
+.city
+    padding-top: 40px
+    padding-bottom: 70px
+    overflow: hidden
+    &-info
+        background: #FFFFFF
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        border-radius: 1px
+        padding: 30px 30px 15px
+        &__title
+            font-weight: 700
+            font-size: 28px
+            color: $text_blue
+            text-decoration: underline
+            display: flex
+            align-items: center
+            margin-bottom: 25px
+            &::before
+                display: block
+                content: ''
+                width: 17px
+                height: 24px
+                background: url(../img/contacts/loc.png) center no-repeat
+                flex-shrink: 0
+                margin-right: 10px
+        &__item
+            margin-bottom: 30px
+            &-title
+                font-size: 14px
+                text-transform: uppercase
+                margin-bottom: 5px
+            &-value
+                font-weight: 300
+                font-size: 16px
+                color: $text_gray
+        &__soc
+            display: flex
+            a
+                display: inline-flex
+                width: 38px
+                height: 38px
+                align-items: center
+                justify-content: center
+                border: 1px solid #879098
+                border-radius: 100%
+                margin-right: 14px
+                transition: all .25s ease
+                path
+                    fill: #879098
+                    transition: all .25s ease
+                &:hover
+                    background-color: #879098
+                    path
+                        fill: #fff
+    &-map
+        position: relative
+        z-index: 1
+        height: 100%
+        width: 100%
+        &::after
+            content: ''
+            display: block
+            width: 348px
+            height: 207px
+            background: url(../img/contacts/decor.png) center no-repeat
+            position: absolute
+            top: 0
+            right: 0
+            transform: translate(33%, -40%)
+            z-index: -1

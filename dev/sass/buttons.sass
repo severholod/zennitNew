@@ -1,0 +1,52 @@
+.btn
+    display: inline-flex
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    text-transform: uppercase
+    border-radius: 2px
+    height: 51px
+    width: 211px
+    align-items: center
+    justify-content: center
+    padding: 5px 10px
+    transition: all .25s ease
+    &_trp
+        border: 1px solid $black
+        background: transparent
+        color: $black
+        &:hover
+            background: $elem_blue
+            border: 1px solid $elem_blue
+            color: #fff
+    &_blue
+        background: $elem_blue
+        color: #fff
+        border: none
+        &:hover
+            color: #fff
+            background: #006CFF
+    &_100per
+        width: 100%
+    &:hover
+        text-decoration: none
+    &_withArrow
+        justify-content: space-around
+        &::after
+            content: ''
+            display: block
+            width: 24px
+            height: 16px
+            background: url(../img/offer/arrow.png) center no-repeat
+            background-size: contain
+.link
+    font-weight: 500
+    font-size: 13px
+    color: $light_blue
+    text-transform: uppercase
+    text-decoration: underline
+    transition: color .25s ease
+    &:hover
+        color: $light_blue
+        text-decoration: none
+

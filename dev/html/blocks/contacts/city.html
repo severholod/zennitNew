@@ -1,0 +1,107 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item_active">Контакты</li>
+        </ul>
+    </div>
+</div>
+<section class="city">
+    <div class="container">
+        <div class="section-title">Контакты</div>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="city-info">
+                    <div class="city-info__title">
+                        Самара
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="city-info__item">
+                                <div class="city-info__item-title">АДРЕС</div>
+                                <div class="city-info__item-value">
+                                    ул. Ново-Садовая, д. 44 офисы 135, 135б, 135в Офисный центр "Тисиз"
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="city-info__item">
+                                <div class="city-info__item-title">ТЕЛЕФОН</div>
+                                <div class="city-info__item-value"><a href="tel:88462335143">+7 (846) 233-51-43</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-none d-sm-block">
+                            <div class="city-info__item">
+                                <div class="city-info__item-title">E-MAIL</div>
+                                <div class="city-info__item-value">
+                                    <a href="mailto:samara@zennit.ru">samara@zennit.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="city-info__item">
+                                <div class="city-info__item-title">Режим работы</div>
+                                <div class="city-info__item-value">пн.- пт.: 9:00-21:00 <br>
+                                    сб.: 9:00-14:00</div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-none d-sm-block">
+                            <div class="city-info__item city-info__soc">
+                                <a href="#">
+                                    <!-- include "../assets/img/icons/ok.svg" -->
+                                </a>
+                                <a href="#">
+                                    <!-- include "../assets/img/icons/vk.svg" -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="city-map" id="map"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var samara = [53.213396, 50.141228],
+            samaraNew = [53.213396 + 0.001, 50.141228 + 0.003]
+            moscow = [55.751148, 37.655239];
+        var myMap = new ymaps.Map("map", {
+            center: samaraNew,
+            zoom: 15
+        });
+        // Создание метки с квадратной активной областью.
+        var squareLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-info-wrapper">
+                <div class="map-info addresses-item">
+                <div class="addresses-item__content">
+                        <div class="addresses-item__title">Самара</div>
+                        <div class="addresses-item__address">ул. Ново-Садовая, д. 44 офисы 135, 135б, 135в Офисный центр "Тисиз"</div>
+                    </div>
+                    <div class="addresses-item__phone"><a href="">+7 (812) 564-65-14</a></div>
+                </div>
+            </div>
+        `);
+
+        var squarePlacemark = new ymaps.Placemark(
+            samara, {
+                // hintContent: 'Метка с прямоугольным HTML макетом'
+            }, {
+                iconLayout: squareLayout,
+                // Описываем фигуру активной области "Прямоугольник".
+                // iconShape: {
+                //     type: 'Rectangle',
+                //     // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                //     coordinates: [
+                //         [-25, -25], [25, 25]
+                //     ]
+                // }
+            }
+        );
+        myMap.geoObjects.add(squarePlacemark);
+    }
+</script>

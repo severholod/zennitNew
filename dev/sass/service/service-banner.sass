@@ -1,0 +1,169 @@
+.service
+    &-detail
+        background-color: $section-bg
+    &-banner
+        background-position: top
+        background-repeat: no-repeat
+        padding: 77px 0 130px
+        &__content
+            color: #fff
+        &__overtitle
+            font-size: 16px
+            text-transform: uppercase
+            margin-bottom: 10px
+        &__title
+            font-weight: 900
+            font-size: 52px
+            line-height: 70px
+            margin-bottom: 52px
+        &__subtitle
+            font-size: 22px
+            font-weight: 300
+            margin-bottom: 40px
+    &-advantages
+        max-width: 520px
+        &__title
+            font-size: 19px
+            text-transform: uppercase
+            font-weight: bold
+            margin-bottom: 30px
+    &-advantage
+        background: #FCFCFC
+        box-shadow: 0px 0px 80px rgba(97, 97, 97, 0.4)
+        border-radius: 3px
+        margin-bottom: 15px
+        &__title
+            font-weight: 500
+            font-size: 19px
+            color: $black
+            position: relative
+            transition: color .25s ease
+            cursor: pointer
+            padding: 22px 25px
+            &::after
+                display: block
+                content: ''
+                height: 16px
+                width: 10px
+                background: url(../img/icons/arrow-left.png) center no-repeat
+                background-size: contain
+                position: absolute
+                top: calc(50% - 8px)
+                right: 25px
+                transform: rotate(-90deg)
+                transition: transform .25s ease-in-out
+            &:hover
+                color: $elem_blue
+        &__text
+            color: $black
+            font-size: 16px
+            padding: 0 25px
+            max-height: 0
+            overflow: hidden
+            transition: max-height .25s linear, padding-bottom .25s ease-in-out
+        &.toggle-item_visible
+            .service-advantage__text
+                max-height: 150px
+                padding-bottom: 22px
+            .service-advantage__title
+                color: $elem_blue
+                &::after
+                    transform: rotate(90deg)
+    &-form
+        margin-top: 70px
+        height: 450px
+        background: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 30px
+        text-align: center
+        color: $text_blue
+    &-banner2
+        padding: 130px 0 30px
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        &::after
+            background: rgba(23, 23, 23, 0.3)
+        .service-banner
+            &__content
+                max-width: 550px
+                position: relative
+                margin-bottom: 130px
+            &__mark
+                width: 190px
+                height: 190px
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                position: absolute
+            &__title
+                margin-bottom: 27px
+            &__button
+                .btn
+                    width: 300px
+    &-advantage2
+        background: #FFFFFF
+        border-radius: 0px 12px
+        padding: 20px
+        height: calc(100% - 20px)
+        margin-bottom: 20px
+        &__title
+            font-weight: 500
+            font-size: 17px
+            color: $black
+            margin-bottom: 10px
+        &__text
+            font-size: 14px
+            color: $text_gray
+    &-advantage3
+        background: #FFFFFF
+        border-radius: 0px 12px
+        padding: 35px 20px
+        height: calc(100% - 20px)
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        &__title
+            font-size: 17px
+            color: $black
+        &__icon
+            width: 29px
+            height: 29px
+            border: 2.5px solid $text_blue
+            border-radius: 100%
+            background: url(../img/programs/check.png) center no-repeat
+            margin-right: 15px
+            flex-shrink: 0
+.mark_bankrotstvo
+    bottom: 0
+    right: -225px
+    transform: translate(100%, 50%)
+.mark_prizyv
+    top: -60px
+    right: 0
+.mark_service
+    bottom: 0
+    right: -150px
+    transform: translateX(100%)
+.prizyv-banner
+    overflow: hidden
+    &::after
+        background: rgba(23, 23, 23, 0.45)
+    .service-banner
+        &__content
+            max-width: 665px
+            margin-bottom: 165px
+    .container
+        position: relative
+        z-index: 1
+    .service-banner__img
+        position: absolute
+        right: 80px
+        top: -75px
+        z-index: -1
+.banner-templ
+    padding: 110px 0 30px
+    &::after
+        background: rgba(39, 43, 46, 0.5)

@@ -1,0 +1,57 @@
+.faq-page
+    padding-top: 27px
+    background: rgba(211, 212, 211, 0.2)
+    .faq
+        background-color: transparent
+        padding: 40px 0 80px
+        overflow: hidden
+        &-tabs
+            overflow-y: hidden
+        &-tab
+            font-size: 15px
+            color: $text_gray
+            padding: 10px 25px
+            background: #FFFFFF
+            box-shadow: 0px 0px 15px rgba(173, 173, 173, 0.15)
+            border-radius: 2px
+            margin-bottom: 20px
+            cursor: pointer
+            transition: all .25s ease
+            &.tabs-item_active, &:hover
+                background: $light_blue
+                color: #fff
+        &-readmore
+            display: block
+            width: 100px
+            text-align: right
+            margin-left: auto
+            margin-top: 20px
+        &-items
+            padding-top: 30px
+            display: none
+            position: relative
+            z-index: 1
+            &.tab-content_active
+                display: block
+            &::before, &::after
+                content: ''
+                display: block
+                width: 348px
+                height: 206px
+                background: url(../img/news/dots1.png) center no-repeat
+                background-size: contain
+                position: absolute
+                z-index: -1
+            &::before
+                top: 0px
+                left: -84px
+            &::after
+                bottom: -50px
+                right: -84px
+        &-item
+            box-shadow: 0px 0px 40px rgba(173, 173, 173, 0.4)
+            &__head
+                color: $black
+            &.toggle-item_visible, &:hover
+                .faq-item__head
+                    color: $text_blue

@@ -1,0 +1,40 @@
+.utp2
+    padding: 60px 0 45px
+    position: relative
+    z-index: 1
+    &-item
+        margin-bottom: 30px
+        &__head
+            display: flex
+            flex-direction: column
+        &__icon
+            width: 90px
+            height: 90px
+            background: $light_blue
+            border-radius: 0 10px
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 27px
+            flex-shrink: 0
+        &__title
+            font-weight: 500
+            font-size: 17px
+            color: $black
+            margin-bottom: 15px
+            max-width: 300px
+        &__text
+            font-weight: 300
+            font-size: 15px
+            color: $text_gray
+    &::after
+        content: ''
+        display: block
+        width: 339px
+        height: 253px
+        background: url(../img/utp/bg.png) center no-repeat
+        background-size: contain
+        position: absolute
+        top: 110px
+        right: 200px
+        z-index: -1

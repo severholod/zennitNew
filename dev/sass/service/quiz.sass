@@ -1,0 +1,154 @@
+.quiz
+    padding: 70px 0
+    background: #fff
+    &-wrapper
+        display: flex
+        background: #FFFFFF
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        border-radius: 5px
+    &-content
+        flex: 0 0 55%
+        position: relative
+        &__wrapper
+            padding: 50px 70px 50px 50px
+            height: 100%
+            flex-direction: column
+            justify-content: space-between
+            display: none
+            &.active
+                display: flex
+    &-image
+        flex: 0 0 45%
+        overflow: hidden
+        img
+            height: 100%
+    &-items
+        &__bottom
+            text-align: right
+    &-item
+        margin-bottom: 30px
+        &__head
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 20px
+        &__title
+            font-size: 20px
+            color: $black
+            &_last
+                max-width: 500px
+        &__output
+            border: none
+            background-color: transparent
+            font-size: 17px
+            color: $black
+            text-align: right
+        &__slider
+            margin-bottom: 15px
+        &__range
+            display: flex
+            align-items: center
+            justify-content: space-between
+            span
+                font-size: 15px
+                color: $text_gray
+        &__checkboxes
+            display: flex
+            align-items: center
+        &__checkbox
+            //margin-right: 30px
+            input
+                display: none
+                &:checked + .checkbox-label::before
+                    background-image: url(../img/programs/check.png)
+        &__radio
+            margin-right: 30px
+            input
+                display: none
+                &:checked + .radio-label::before
+                    background-color: $light_blue
+        &:last-child
+            margin-bottom: 0
+    &-confirm
+        margin-bottom: 20px
+        .checkbox-label
+            font-size: 12px
+            font-weight: 300
+            justify-content: flex-end
+            &::before
+                width: 17px
+                height: 17px
+                background-size: 60%
+                box-shadow: none
+    &-field
+        width: 100%
+        background: #F9F9F9
+        border: 1px solid rgba(173, 173, 173, 0.4)
+        border-radius: 2px
+        max-width: 480px
+        padding: 13px 15px
+        font-weight: 300
+        font-size: 15px
+        color: #313131
+    .jquery-slider
+        height: 5px
+        background: #DDDFE9
+        border-radius: 5px
+        border: none
+        position: relative
+        div
+            background: $light_blue
+            border-radius: 5px
+            height: 100%
+        span
+            display: block
+            height: 21px
+            width: 21px
+            background: $light_blue
+            border: 6px solid #fff
+            border-radius: 100%
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+            position: relative
+            top: -13px
+            margin-left: -10.5px
+            &:focus
+                outline: none
+    &-btn
+        position: absolute
+        bottom: 70px
+        right: 70px
+        &_small
+            width: 125px
+.checkbox-label
+    font-size: 17px
+    color: $black
+    display: flex
+    align-items: center
+    &::before
+        content: ''
+        display: inline-block
+        width: 30px
+        height: 30px
+        background-color: #FFFFFF
+        background-position: center
+        background-repeat: no-repeat
+        border: 1px solid #EAEAEA
+        box-shadow: 0px 0px 10px rgba(172, 172, 172, 0.25)
+        margin-right: 15px
+        cursor: pointer
+.radio-label
+    font-size: 17px
+    color: $black
+    display: flex
+    align-items: center
+    &::before
+        content: ''
+        display: inline-block
+        width: 30px
+        height: 30px
+        background-color: #FFFFFF
+        border: 8px solid #fff
+        border-radius: 100%
+        box-shadow: 0px 0px 3px rgba(172, 172, 172, 0.9)
+        margin-right: 15px
+        cursor: pointer

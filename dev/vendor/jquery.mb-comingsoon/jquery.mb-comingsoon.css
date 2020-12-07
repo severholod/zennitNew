@@ -1,0 +1,83 @@
+.counter-group {
+  text-align: center;
+  overflow: hidden;
+}
+.counter-block {
+  float: left;
+  margin-right: 10px;
+}
+.counter-block .counter {
+  position: relative;
+  background-color: #fff;
+  width: 64px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+.counter-block .counter .number {
+  width: 50%;
+  color: #606060;
+  position: absolute;
+  font-size: 2.5rem;
+  line-height: 50px;
+  margin: 5px 0;
+  top: -10000px;
+}
+.counter-block .counter .number.tens {
+  left: 0;
+  box-shadow: inset 1px 0 0 #c1c1c1;
+}
+.counter-block .counter .number.units {
+  left: 50%;
+  box-shadow: inset 1px 0 0 #c1c1c1;
+}
+.counter-block .counter .number.hundreds {
+  display: none;
+}
+.counter-block .counter .number.show {
+  top: 0;
+  z-index: 2;
+}
+.counter-block .counter .number.hidden-down {
+  top: 100%;
+}
+.counter-block .counter .number.hidden-up {
+  top: -100%;
+  z-index: 100;
+}
+.counter-block .counter.with-hundreds {
+  width: 98px;
+}
+.counter-block .counter.with-hundreds .number {
+  width: 33.33%;
+}
+.counter-block .counter.with-hundreds .number.tens {
+  left: 33.33%;
+}
+.counter-block .counter.with-hundreds .number.units {
+  left: 66.66%;
+}
+.counter-block .counter.with-hundreds .number.hundreds {
+  display: block;
+  left: 0;
+}
+.counter-block .counter-caption {
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+
+@media (max-width: 439px) {
+  .counter-block .counter {
+    width: 50px;
+    height: 50px;
+  }
+  .counter-block .counter.with-hundreds {
+    width: 76px;
+  }
+  .counter-block .counter .number {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}

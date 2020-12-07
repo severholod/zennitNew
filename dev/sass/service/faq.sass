@@ -1,0 +1,89 @@
+.faq
+    padding: 80px 0
+    background: rgba(211, 212, 211, 0.2)
+    &-item
+        margin-bottom: 20px
+        background: #fff
+        &__head
+            padding: 17px 60px 17px 40px
+            font-weight: 500
+            font-size: 18px
+            color: $black
+            position: relative
+            cursor: pointer
+            &::after
+                content: ''
+                display: block
+                width: 20px
+                height: 2px
+                background: $black
+                position: absolute
+                right: 40px
+                top: calc(50% - 1px)
+            &::before
+                content: ''
+                display: block
+                height: 20px
+                width: 2px
+                background: $black
+                position: absolute
+                right: 49px
+                top: calc(50% - 10px)
+        &__content
+            font-size: 15px
+            color: $text_gray
+            padding: 0 40px
+            max-height: 0
+            transition: max-height .4s linear, padding-bottom .25s ease-in-out
+            overflow: hidden
+            strong
+                color: $black
+            ul
+                margin: 10px 0
+                list-style-type: none
+        &.toggle-item_visible
+            .faq-item__content
+                max-height: 1000px
+.v2 .faq
+    position: relative
+    background: linear-gradient(83.16deg, rgba(166, 176, 189, 0.5) 11.27%, rgba(237, 232, 224, 0.5) 125.06%)
+    z-index: 1
+    overflow: hidden
+    &::after
+        content: ''
+        display: block
+        width: 191px
+        height: 210px
+        background: url(../img/dots_white-decor2.png) top no-repeat
+        position: absolute
+        top: 85px
+        left: 1500px
+        z-index: -1
+.prizyv .faq
+    background-color: #fff
+    &-item
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+.v2 .faq, .prizyv .faq
+    &-item
+        &__head
+            color: $text_blue
+            &:hover
+                color: $light_blue
+            &::before
+                display: none
+            &::after
+                width: 22px
+                height: 12px
+                background-color: transparent
+                background-image: url(../img/icons/arrow-down.png)
+                background-position: center
+                background-size: contain
+                background-repeat: no-repeat
+                transform: rotate(0)
+                transition: transform .25s ease .2s
+        &__content
+            strong
+                color: $text_blue
+        &.toggle-item_visible
+            .faq-item__head::after
+                transform: rotate(180deg)

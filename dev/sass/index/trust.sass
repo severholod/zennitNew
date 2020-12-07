@@ -1,0 +1,82 @@
+.trust
+    padding: 80px 0 80px
+    overflow: hidden
+    &-text
+        padding-right: 40px
+    &-item
+        padding-left: 40px
+        margin-bottom: 30px
+        &__title
+            font-weight: 500
+            font-size: 19px
+            color: $black
+            position: relative
+            &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 2px
+                background: $black
+                position: absolute
+                left: -40px
+                top: calc(50% - 1px)
+        &__description
+            padding-top: 12px
+            font-size: 15px
+            color: $text_gray
+        &:last-child
+            margin-bottom: 0
+    &-image
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 20px 60px
+        background: url('../img/main-page/trust-img.jpg') center no-repeat
+        background-size: cover
+        color: #fff
+        position: relative
+        &__text
+            border: 7px solid #fff
+            border-right: none
+            padding: 80px 30px
+            position: relative
+            display: flex
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 7px
+                height: 30%
+                position: absolute
+                right: 0
+                top: 0
+                background: #fff
+            &::after
+                content: ''
+                display: block
+                width: 7px
+                height: 30%
+                position: absolute
+                right: 0
+                bottom: 0
+                background: #fff
+        &__bigtext
+            font-weight: bold
+            font-size: 64px
+            line-height: 75px
+            margin-right: 20px
+        &__smalltext
+            font-size: 19px
+            text-transform: uppercase
+            margin-right: -40px
+        &::before
+            content: ''
+            display: block
+            width: 121px
+            height: 350px
+            position: absolute
+            left: calc(100% + 20px)
+            top: 50%
+            transform: translateY(-50%)
+            background: url('../img/dots-decor.png') center no-repeat

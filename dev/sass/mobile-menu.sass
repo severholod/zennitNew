@@ -1,0 +1,32 @@
+.burger
+    width: 28px
+    height: 20px
+    position: relative
+    cursor: pointer
+    &__line
+        display: block
+        width: 100%
+        height: 2px
+        background: $elem_blue
+        position: absolute
+        left: 0
+        transform: rotate(0)
+        transition: transform .25s ease, top .25s ease, bottom .25s ease
+        &_first
+            top: 0
+        &_second
+            top: calc(50% - 1px)
+            opacity: 1
+            transition: opacity .25s ease
+        &_third
+            bottom: 0
+    &_active
+        .burger__line
+            &_second
+                opacity: 0
+            &_first
+                top: calc(50% - 1px)
+                transform: rotate(45deg)
+            &_third
+                bottom: calc(50% - 1px)
+                transform: rotate(-45deg)

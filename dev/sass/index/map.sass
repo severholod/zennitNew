@@ -1,0 +1,43 @@
+.map
+    padding: 129px 0
+    background-color: #E7E9EC
+    background-image: url('../img/main-page/map.png')
+    background-position: 100% 100%
+    background-repeat: no-repeat
+    &__text
+        font-size: 15px
+        color: $text_gray
+        margin-bottom: 35px
+    &-slider
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+    .slider-arrows
+        justify-content: flex-end
+        margin-top: 25px
+.office
+    background: #FFF
+    border-radius: 1px
+    padding: 35px 20px 35px 65px
+    &__city
+        color: $black
+        font-weight: 500
+        font-size: 19px
+        position: relative
+        margin-bottom: 12px
+        &::before
+            content: ''
+            display: block
+            width: 20px
+            height: 2px
+            background-color: $black
+            position: absolute
+            left: -40px
+            top: calc(50% - 1px)
+    &__address
+        font-weight: 300
+        font-size: 15px
+        color: $text_gray
+        margin-bottom: 20px
+    &__phone
+        font-size: 19px
+        line-height: 20px
+        color: $black

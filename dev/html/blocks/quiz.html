@@ -1,0 +1,145 @@
+<section class="quiz">
+    <div class="container">
+        <div class="section-title">Узнайте, подходит ли вам процедура банкротства</div>
+        <div class="quiz-wrapper">
+            <form class="quiz-content">
+                <div class="quiz-content__wrapper active">
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Сумма долга</div>
+                            <input class="quiz-item__output" name="sum" id="sum-output" value="500000 ₽">
+                        </div>
+                        <div class="quiz-item__slider">
+                            <div class="jquery-slider" id="sum-slider"></div>
+                        </div>
+                        <div class="quiz-item__range">
+                            <span>от 30 000 ₽</span>
+                            <span>более 5 000 000 ₽</span>
+                        </div>
+                    </div>
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Официальный доход</div>
+                            <input class="quiz-item__output" id="income-output" value="Нет дохода" name="income">
+                        </div>
+                        <div class="quiz-item__slider">
+                            <div class="jquery-slider" id="income-slider"></div>
+                        </div>
+                        <div class="quiz-item__range">
+                            <span>нет дохода</span>
+                            <span>более 100 000 ₽</span>
+                        </div>
+                    </div>
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Есть ли ипотека?</div>
+                        </div>
+                        <div class="quiz-item__checkboxes">
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop1" id="prop1-y" checked>
+                                <label class="radio-label" for="prop1-y">Да</label>
+                            </div>
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop1" id="prop1-n">
+                                <label class="radio-label" for="prop1-n">Нет</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn btn_blue quiz-btn quiz-btn_small quiz-btn_next">Далее</button>
+                </div>
+                <div class="quiz-content__wrapper">
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Имеется ли в собственности недвижимое имущество?</div>
+                        </div>
+                        <div class="quiz-item__checkboxes">
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop2" id="prop2-y" checked>
+                                <label class="radio-label" for="prop2-y">Да</label>
+                            </div>
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop2" id="prop2-n">
+                                <label class="radio-label" for="prop2-n">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Имеется ли движимое имущество в собственности?</div>
+                        </div>
+                        <div class="quiz-item__checkboxes">
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop3" id="prop3-y" checked>
+                                <label class="radio-label" for="prop3-y">Да</label>
+                            </div>
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop3" id="prop3-n">
+                                <label class="radio-label" for="prop3-n">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Были ли сделки, за последние 3 года превышающие сумму 300 тыс. руб.?</div>
+                        </div>
+                        <div class="quiz-item__checkboxes">
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop4" id="prop4-y" checked>
+                                <label class="radio-label" for="prop4-y">Да</label>
+                            </div>
+                            <div class="quiz-item__radio">
+                                <input type="radio" name="prop4" id="prop4-n">
+                                <label class="radio-label" for="prop4-n">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn_blue quiz-btn quiz-btn_small quiz-btn_next">Далее</button>
+                </div>
+                <div class="quiz-content__wrapper">
+                    <div class="quiz-item">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title">Задолженность перед:</div>
+                        </div>
+                        <div class="quiz-item__checkbox">
+                            <input type="checkbox" name="prop5-banks" id="prop5-banks">
+                            <label class="checkbox-label" for="prop5-banks">Банками</label>
+                        </div>
+                        <div class="quiz-item__checkbox">
+                            <input type="checkbox" name="prop5-fiz" id="prop5-fiz">
+                            <label class="checkbox-label" for="prop5-fiz">Физическими лицами</label>
+                        </div>
+                        <div class="quiz-item__checkbox">
+                            <input type="checkbox" name="prop5-jur" id="prop5-jur">
+                            <label class="checkbox-label" for="prop5-jur">Юридическими лицами</label>
+                        </div>
+                        <div class="quiz-item__checkbox">
+                            <input type="checkbox" name="prop5-gos" id="prop5-gos">
+                            <label class="checkbox-label" for="prop5-gos">Государственными органами</label>
+                        </div>
+                    </div>
+                    <button class="btn btn_blue quiz-btn quiz-btn_next">Последний вопрос</button>
+                </div>
+                <div class="quiz-content__wrapper">
+                    <div class="quiz-items">
+                        <div class="quiz-item__head">
+                            <div class="quiz-item__title quiz-item__title_last">Оставьте Ваш номер телефона для получения расчета и консультации</div>
+                        </div>
+                        <div class="quiz-item"><input type="text" class="quiz-field" name="name" id="quiz-name" placeholder="Ваше имя"></div>
+                        <div class="quiz-item"><input type="tel" class="quiz-field" name="tel" id="quiz-tel" placeholder="+7 (___) ___-__-__"></div>
+                    </div>
+                    <div class="quiz-items__bottom">
+                        <div class="quiz-item__checkbox quiz-confirm">
+                            <input type="checkbox" name="user-confirm" id="user-confirm" checked>
+                            <label class="checkbox-label" for="user-confirm">Нажимая на кнопку, я принимаю условия соглашения</label>
+                        </div>
+                        <button class="btn btn_blue">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+                    </div>
+                </div>
+            </form>
+            <div class="quiz-image">
+                <img src="/img/service/forYou.jpg" alt="Опрос">
+            </div>
+        </div>
+    </div>
+</section>

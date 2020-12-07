@@ -1,0 +1,45 @@
+.services
+    &-list
+        background-color: $section-bg
+        padding-top: 27px
+        .services
+            padding: 40px 0 30px
+            overflow: hidden
+            .row
+                position: relative
+        .service
+            position: relative
+            &::before
+                content: ''
+                display: block
+                border-left: 48px solid transparent
+                border-right: 48px solid transparent
+                border-top: 48px solid transparent
+                border-bottom: 48px solid #f6f6f6
+                position: absolute
+                top: -43px
+                left: -43px
+                transform: rotate(-45deg)
+    &-jur .row
+        &::before
+            content: ''
+            display: block
+            width: 348px
+            height: 182px
+            background: url(../img/services/jur-dots.png) center no-repeat
+            background-size: contain
+            position: absolute
+            bottom: 30px
+            left: -100px
+    &-fiz .row
+        &::before
+            content: ''
+            display: block
+            width: 348px
+            height: 207px
+            background: url(../img/services/fiz-dots.png) center no-repeat
+            background-size: contain
+            position: absolute
+            right: -100px
+            top: -50px
+

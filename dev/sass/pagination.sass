@@ -1,0 +1,25 @@
+.pagination
+    padding-top: 15px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-list
+    &-item
+        display: inline-block
+        padding: 0 7px
+        color: $text_gray
+        &_active
+            color: #FFFFFF
+            background: $light_blue
+    &-next
+        a
+           color: $text_gray
+        i
+            &::before
+                content: ''
+                display: inline-block
+                width: 6px
+                height: 10px
+                background: url(../img/icons/arrow-gray.png) center no-repeat
+                background-size: contain
+                margin-left: 3px
