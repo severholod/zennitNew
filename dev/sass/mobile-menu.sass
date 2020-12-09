@@ -30,3 +30,56 @@
             &_third
                 bottom: calc(50% - 1px)
                 transform: rotate(-45deg)
+.mobile-menu
+    position: fixed
+    top: 137px
+    left: 0
+    z-index: 10
+    transition: all .25s ease
+    width: 100%
+    background: #F2F4F7
+    box-shadow: 0px 10px 15px rgba(116, 116, 116, 0.3)
+    border-radius: 2px
+    transform: translateX(-110%)
+    overflow-y: auto
+    &_active
+        transform: translateX(0)
+    &-content
+        display: none
+        &_active
+            display: block
+    &__item
+        font-weight: 500
+        font-size: 15px
+        color: $black
+        text-transform: uppercase
+        border-bottom: 1px solid #D9DEE7
+        a
+            padding: 16px 20px
+            display: block
+            &:hover
+                text-decoration: none
+        &_withArrow
+            position: relative
+            &::after
+                display: block
+                content: ''
+                width: 9px
+                height: 14px
+                background: url(../img/icons/arrow-left.png) center no-repeat
+                transform: rotate(-90deg)
+                margin-left: 15px
+                position: absolute
+                top: calc(50% - 7px)
+                left: 220px
+        &_back
+            a
+                padding-left: 45px
+            &::after
+                left: 0
+                transform: rotate(0)
+        &_small
+            font-weight: 400
+            text-transform: none
+            a
+                padding: 11px 20px

@@ -44,26 +44,39 @@ $(document).ready(function(){
 	/*----------------Мобильное меню-------------*/
 	$('.burger').click(function(){
 		$(this).toggleClass('burger_active')
-		$('.overlay').toggleClass('overlay_active');
+		// $('.overlay').toggleClass('overlay_active');
 		$(".mobile-menu").toggleClass('mobile-menu_active');
 	});
 	$('.mobile-menu__close').click(function(){
-		$('.overlay').removeClass('overlay-active');
+		// $('.overlay').removeClass('overlay-active');
 		$(".mobile-menu").removeClass('mobile-menu-active');
 	});
 	$('.overlay').click(function(){
-		$('.overlay').removeClass('overlay-active');
+		// $('.overlay').removeClass('overlay-active');
 		$(".mobile-menu").removeClass('mobile-menu-active');
 	});
+	$('.mobile-menu__tab').click((event) => {
+		const target = event.target.dataset.href
+		event.preventDefault()
+		$('.mobile-menu-content').removeClass('mobile-menu-content_active')
+		$(`.mobile-menu-content[data-content = ${target}]`).addClass('mobile-menu-content_active')
+	})
 	/*------------------------------------------------*/
 	/*---------------------Шапка---------------------*/
-	var header = $('.header')
 	function headerChange() {
-		offset = window.pageYOffset
+		const offset = window.pageYOffset,
+			topHeight = $('.top').innerHeight(),
+			headerHeight = $('.header').innerHeight(),
+			windowHeight = window.innerHeight
+		console.log(windowHeight)
 		if(offset > 70) {
 			$('.header').addClass('scroll')
+			$('.mobile-menu').css('top', headerHeight)
+			$('.mobile-menu').height(windowHeight - headerHeight)
 		} else {
-			$('.header').removeClass('scroll')	
+			$('.header').removeClass('scroll')
+			$('.mobile-menu').css('top', headerHeight + topHeight)
+			$('.mobile-menu').height(windowHeight - headerHeight - topHeight)
 		}
 	}
 	headerChange()
@@ -78,6 +91,15 @@ $(document).ready(function(){
 		} else {
 			$(this).parent().children('.toggle-item').removeClass('toggle-item_visible')
 			$(this).addClass('toggle-item_visible')
+		}
+	})
+	$(document).click((event) => {
+		if(event.target.closest('.location') && !event.target.closest('.dropdown-cities__close')) {
+			$('.dropdown-cities').addClass('dropdown_active')
+		} else {
+			$('.dropdown-cities').removeClass('dropdown_active')
+			$('#city-search').val('')
+			$('.dropdown-cities__item').show()
 		}
 	})
 	/*-----------------------------------------------*/
@@ -197,6 +219,17 @@ $(document).ready(function(){
 				} else {
 					$('#income-output').val(output)
 				}
+			}
+		})
+	})
+	/*-----------------------------------------------*/
+	/*-----------------Cities-filter-----------------*/
+	$('#city-search').keyup((event) => {
+		const value = event.target.value
+		$('.dropdown-cities__item a').each((i, item) => {
+			$(item).parent().hide()
+			if(item.text.toLowerCase().includes(value.toLowerCase())) {
+				$(item).parent().show()
 			}
 		})
 	})

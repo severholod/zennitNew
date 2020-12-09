@@ -46,8 +46,13 @@
             padding: 20px 15px
             &__title
                 font-size: 15px
-
+    .dropdown
+        &-menu
+            &__item
+                font-size: 15px
 @media(max-width: 1349px) and (min-width: 1200px)
+    .header-logo img
+        height: 51px
     .step
         .forWhom-item__title
             font-size: 15px
@@ -58,6 +63,9 @@
     $header-height: 114px
     .top
         margin-bottom: 61px
+    .nav
+        &__item
+            height: 61px
     .nav
         padding: 0
     .banner
@@ -146,6 +154,13 @@
             left: 0
             background-color: rgba(211, 212, 211, .7)
             z-index: -1
+    .dropdown
+        &-section
+            padding: 25px
+        &-menu
+            &__item
+                font-size: 14px
+                padding: 5px 0
 @media(max-width: 1199px) and (min-width: 992px)
     .whenNeed
         &-item
@@ -163,6 +178,7 @@
     $header-height: 137px
     .header
         top: 76px
+        padding: 10px 0
         &__button
             display: inline-block
             min-width: 170px
@@ -317,6 +333,21 @@
             flex-wrap: nowrap
         &-readmore
             display: none !important
+    .dropdown
+        opacity: 1
+        visibility: visible
+        overflow: hidden
+        &-cities
+            top: 76px
+            right: 0
+            left: auto
+            width: 0%
+            height: calc(100vh - 76px)
+            &.dropdown_active
+                width: 100%
+    .top
+        .pl-custom
+            position: static
 @media (max-width: 991px) and (max-height: 829px)
     .banner
         padding: 45px 0
@@ -536,6 +567,15 @@
 @media (min-width: 576px)
     .mobile-achievements
         display: none
+@media(max-width: 620px)
+    .dropdown
+        &-cities
+            overflow-y: auto
+            &__item
+                flex: 0 0 50%
+                max-width: 50%
+                font-size: 12px
+
 @media(max-width: 575px)
     $top-height: 61.6px
     $header-height: 48px
@@ -769,6 +809,10 @@
         &-slider
             &__wrapper
                 margin: 0 -10px
+    .dropdown
+        &-cities
+            top: 61.6px
+            height: calc(100vh - 61.6px)
 @media(max-width: 450px)
     .whenNeed
         padding: 40px 0
@@ -954,3 +998,9 @@
         .service-banner__title
             font-size: 28px
             line-height: 35px
+    .dropdown
+        &-cities
+            top: 52.5px
+            height: calc(100vh - 52.5px)
+            &__item
+                padding: 3px 10px 3px 25px
