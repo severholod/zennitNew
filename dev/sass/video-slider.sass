@@ -1,0 +1,40 @@
+.video
+    background: #fff
+    padding: 60px 0
+    overflow: hidden
+    &-slider
+        position: relative
+        margin-bottom: 20px
+        &__item
+            padding: 15px
+            background: #FFFFFF
+            box-shadow: 0px 0px 11px rgba(173, 173, 173, 0.4)
+            border-radius: 5px
+            iframe
+                height: 235px
+            &-wrapper
+                padding: 15px
+        &::before
+            display: block
+            content: ''
+            width: 348px
+            height: 208px
+            background: url(../img/news/dots1.png) center no-repeat
+            background-size: contain
+            position: absolute
+            bottom: -45px
+            left: -85px
+            z-index: -1
+    .slider-arrows
+        justify-content: flex-end
+    &-link
+        margin: 15px 0
+        height: 272px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        background: #FFFFFF
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        border-radius: 5px
+        padding: 60px 20px 40px

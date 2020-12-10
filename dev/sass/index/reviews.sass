@@ -43,6 +43,9 @@
             max-height: 61px
         &__text
             font-size: 20px
+    &-page
+        padding-top: 27px
+        background: $section-bg
 .reviews-prizyv
     .review__photo
         img
@@ -79,3 +82,68 @@
         text-align: center
         img
             width: 190px
+.statistic
+    padding-top: 40px
+    padding-bottom: 45px
+    overflow: hidden
+    &-item
+        &__link
+            margin-bottom: 40px
+            a
+                font-weight: 300
+                font-size: 16px
+                text-decoration: underline
+                color: $text_gray
+                &:hover
+                    text-decoration: none
+    .row
+        position: relative
+        z-index: 1
+        &::before
+            display: block
+            content: ''
+            width: 348px
+            height: 208px
+            background: url(../img/news/dots1.png) center no-repeat
+            background-size: contain
+            position: absolute
+            right: -45px
+            top: -85px
+            z-index: -1
+.reviews-items
+    padding: 70px 0 30px
+    .review
+        display: flex
+        margin-bottom: 30px
+        height: calc(100% - 30px)
+        &__descr
+            max-height: none
+            margin-bottom: 15px
+    .reviews-tabs
+        flex-wrap: wrap
+        &__item
+            width: 100px
+            height: 100px
+            margin-right: 0
+            margin-bottom: 5px
+            img
+                width: 100%
+                filter: none
+            &:hover
+                border: 3px solid $light_blue
+.client
+    margin-bottom: 30px
+    padding: 0 15px
+    width: 130px
+    &__name
+        text-align: center
+        font-size: 13px
+        color: $text_gray
+.rating
+    position: absolute
+    top: 0
+    left: 0
+    height: 23px
+    margin: 0 !important
+    background: url(../img/programs/stars.svg) left no-repeat
+    z-index: 2

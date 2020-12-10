@@ -1,4 +1,9 @@
 $(document).ready(function(){
+	const ratingNodes = $('.rating')
+	ratingNodes.each((index, item) => {
+		const rating = $(item).prev().text()
+		$(item).width((rating / 5 * 137) + 'px')
+	})
 	/*------------------Попапы--------------------*/
 	$('.popup-sm').fancybox({
 		maxWidth: 465,
@@ -68,7 +73,6 @@ $(document).ready(function(){
 			topHeight = $('.top').innerHeight(),
 			headerHeight = $('.header').innerHeight(),
 			windowHeight = window.innerHeight
-		console.log(windowHeight)
 		if(offset > 70) {
 			$('.header').addClass('scroll')
 			$('.mobile-menu').css('top', headerHeight)
@@ -156,18 +160,35 @@ $(document).ready(function(){
 			},
 		}
 	}
-	const sliders ={
+	const videoSliderConfig = {
+		dots: false,
+		nav: false,
+		loop: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			1200: {
+				items: 2
+			},
+		}
+	}
+	const sliders = {
 		videoSlider: $('.reviews-video'),
 		mapSlider: $('.map-slider'),
 		exampleSlider: $('.examples-slider'),
 		advantagesSlider: $('.advantages-slider'),
 		addressesSlider: $('.addresses-slider'),
+		reviewsSlider: $('.video-slider'),
+		statSlider: $('.stat-slider')
 	}
 	sliders.videoSlider.owlCarousel(config)
 	sliders.mapSlider.owlCarousel(config)
 	sliders.exampleSlider.owlCarousel(exampleSliderConfig)
 	sliders.advantagesSlider.owlCarousel(advantagesSliderConfig)
 	sliders.addressesSlider.owlCarousel(advantagesSliderConfig)
+	sliders.reviewsSlider.owlCarousel(videoSliderConfig)
+	sliders.statSlider.owlCarousel(advantagesSliderConfig)
 	$('.slider-arrow').click(function() {
 		const target = this.dataset.slider
 		const event = this.dataset.event
@@ -189,6 +210,11 @@ $(document).ready(function(){
 		collapsedHeight: 41,
 		moreLink: '<a href="#" class="link faq-readmore">Показать все</a>',
 		lessLink: '<a href="#" class="link faq-readmore">Скрыть</a>'
+	})
+	$('.reviews-items .review__descr').readmore({
+		collapsedHeight: 165,
+		moreLink: '<a href="#" class="link review-readmore">Показать полностью</a>',
+		lessLink: '<a href="#" class="link review-readmore">Скрыть</a>'
 	})
 	/*-----------------------------------------------*/
 	/*--------------------Quiz-----------------------*/

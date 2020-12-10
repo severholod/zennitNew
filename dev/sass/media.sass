@@ -161,6 +161,12 @@
             &__item
                 font-size: 14px
                 padding: 5px 0
+    .reviews-items
+        .review
+            &__letter
+                display: none
+            &__text
+                padding-right: 0
 @media(max-width: 1199px) and (min-width: 992px)
     .whenNeed
         &-item
@@ -348,6 +354,23 @@
     .top
         .pl-custom
             position: static
+    .stat-slider
+        img
+            display: inline !important
+            width: auto !important
+        .statistic-item
+            margin: 10px 10px 30px
+            box-shadow: 0 0 10px hsla(0,0%,68%,.4)
+            .programs-review__logo img
+                height: 70px
+    .statistic
+        .slider-arrows
+            justify-content: flex-end
+    .video-slider::before
+        display: none
+    .row-docs
+        flex-wrap: nowrap
+        overflow: auto
 @media (max-width: 991px) and (max-height: 829px)
     .banner
         padding: 45px 0
@@ -364,7 +387,7 @@
                 font-size: 30px
             &__descr
                 font-size: 14px
-    .services, .reviews, .trust, .info, .map, .team, .form, .news, .faq-page .faq
+    .services, .reviews, .trust, .info, .map, .team, .form, .news, .faq-page .faq, .video, .reviews-items
         padding: 40px 0
     .review
         flex-direction: column
@@ -379,6 +402,7 @@
                 margin-right: 20px
                 border-radius: 100%
                 overflow: hidden
+                flex-shrink: 0
                 img
                     width: 100%
                     height: auto !important
@@ -560,6 +584,30 @@
         overflow: auto
         &__list
             white-space: nowrap
+    .statistic
+        .row::before, .row::after
+            display: none
+    .video
+        &__header
+            margin-bottom: 40px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .section-title
+                margin-bottom: 0
+            .video__link
+                font-size: 13px
+                line-height: 15px
+                display: inline-block
+                color: $light_blue
+                font-weight: 300
+    .client
+        width: 110px
+        .reviews-tabs__item
+            width: 80px
+            height: 80px
+        &__name
+            font-size: 12px
 @media (min-width: 576px) and (max-width: 767px)
     .whenNeed-img img
         width: 130%
@@ -813,6 +861,14 @@
         &-cities
             top: 61.6px
             height: calc(100vh - 61.6px)
+    .video
+        &__header
+            margin-bottom: 30px
+        &__link
+            display: none !important
+    .statistic
+        .section-title, .slider-arrows
+            padding: 0 10px
 @media(max-width: 450px)
     .whenNeed
         padding: 40px 0
