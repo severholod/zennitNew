@@ -587,6 +587,10 @@
     .statistic
         .row::before, .row::after
             display: none
+        .program
+            &__button
+                .btn
+                    max-width: 100%
     .video
         &__header
             margin-bottom: 40px
@@ -869,6 +873,18 @@
     .statistic
         .section-title, .slider-arrows
             padding: 0 10px
+        .program
+            &__button
+                .btn
+                    width: 100%
+        .programs-review
+            &__logo
+                margin-bottom: 15px
+                img
+                    max-height: 60px
+        &-item
+            &__link
+                margin-bottom: 15px
 @media(max-width: 450px)
     .whenNeed
         padding: 40px 0
