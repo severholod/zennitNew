@@ -167,6 +167,13 @@
                 display: none
             &__text
                 padding-right: 0
+    .history
+        &-item
+            img
+                height: auto
+                width: 100%
+    .spectr
+        background-position: left
 @media(max-width: 1199px) and (min-width: 992px)
     .whenNeed
         &-item
@@ -180,6 +187,11 @@
 @media(min-width: 992px)
     .mobile-advantages
         display: none
+    .history
+        &__text
+            height: auto !important
+        &-readmore
+            display: none
 @media(max-width: 991px)
     $header-height: 137px
     .header
@@ -371,6 +383,45 @@
     .row-docs
         flex-wrap: nowrap
         overflow: auto
+    .about-banner
+        background-position: 45%
+        &__content
+            max-width: 530px
+    .history
+        &__text
+            overflow: hidden
+            margin-bottom: 5px
+            font-size: 15px
+        &-readmore
+            margin-bottom: 27px
+            display: inline-block
+        &-item
+            &_solid
+                font-size: 18px
+    .spectr
+        .section-title
+            margin-bottom: 40px
+        &-content
+            padding-left: 0
+            &__inner
+                width: 400px
+                height: 400px
+                margin: 0 auto 25px
+        &-dot
+            position: static
+            display: inline-flex
+            width: 49%
+            margin-bottom: 15px
+            .spectr-dot__title
+                order: 2 !important
+                margin-right: 0
+                margin-left: 22px
+                text-align: left
+                font-size: 16px
+    .stat
+        .trust-image
+            height: auto
+            margin-bottom: 30px
 @media (max-width: 991px) and (max-height: 829px)
     .banner
         padding: 45px 0
@@ -612,6 +663,57 @@
             height: 80px
         &__name
             font-size: 12px
+    .about-banner
+        background: url(../img/about/banner-mobile.jpg) 50% 60% no-repeat
+        background-size: cover
+        padding: 18px 0 28px
+        .section-title
+            margin-bottom: 40px
+        &__person
+            margin-left: 0
+        &__content
+            padding-top: 25px
+            margin-bottom: 300px
+        &__text
+            padding-left: 25px
+            &::before
+                width: 60px
+                height: 60px
+                background-size: contain
+                top: -30px
+    .history
+        &__logo
+            height: 190px
+            margin-top: 27px
+        &-readmore
+            margin-bottom: 0
+    .about-map
+        padding: 40px 0
+        background: url(../img/about/map-small.png) 50% 45% no-repeat
+        &__text
+            margin-bottom: 180px
+        &__button
+            text-align: right
+            margin-top: 40px
+    .spectr
+        padding: 40px 0
+        .section-title
+            margin-bottom: 25px
+        &-content
+            &__inner
+                width: 280px
+                height: 280px
+                span
+                    width: 244px
+                    height: 244px
+                    padding: 25px
+                    font-size: 17px
+        &-dot
+            width: 100%
+    .stat
+        padding: 50px 0
+        &-item
+            margin-bottom: 20px
 @media (min-width: 576px) and (max-width: 767px)
     .whenNeed-img img
         width: 130%
@@ -891,6 +993,11 @@
         &-img
             .btn
                 position: static
+    .about-banner
+        &__person
+            width: 100%
+            &-name
+                font-size: 18px
 @media(max-width: 399px)
     .map
         background-size: 900px 50%
@@ -981,6 +1088,18 @@
         &-item
             &__title
                 font-size: 16px
+    .about-map
+        background-position: center
+    .stat
+        &__text
+            p
+                font-size: 14px
+                margin-bottom: 16px
+        &-item
+            &__num
+                font-size: 30px
+            &__title
+                font-size: 14px
 @media (max-width: 374px)
     $top-height: 52.5px
     $header-height: 48px
@@ -1076,3 +1195,9 @@
             height: calc(100vh - 52.5px)
             &__item
                 padding: 3px 10px 3px 25px
+    .about-banner
+        &__text
+            font-size: 14px
+        &__person
+            &-name
+                font-size: 16px

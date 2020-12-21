@@ -216,6 +216,11 @@ $(document).ready(function(){
 		moreLink: '<a href="#" class="link review-readmore">Показать полностью</a>',
 		lessLink: '<a href="#" class="link review-readmore">Скрыть</a>'
 	})
+	$('.history__text').readmore({
+		collapsedHeight: 150,
+		moreLink: '<a href="#" class="link history-readmore">Подробнее</a>',
+		lessLink: '<a href="#" class="link history-readmore">Скрыть</a>'
+	})
 	/*-----------------------------------------------*/
 	/*--------------------Quiz-----------------------*/
 	$(function() {

@@ -1,0 +1,231 @@
+.about-banner
+    padding: 30px 0 45px
+    background: url(../img/about/banner.jpg) center no-repeat
+    background-size: cover
+    &__content
+        padding-top: 75px
+        max-width: 610px
+    .section-title
+        margin-bottom: 65px
+    &__text
+        color: #646464
+        padding-left: 80px
+        position: relative
+        &::before
+            content: ''
+            display: block
+            color: #FFFFFF
+            position: absolute
+            top: -48px
+            left: 5px
+            width: 93px
+            height: 73px
+            background: url(../img/about/quotes.svg) center no-repeat
+    &__person
+        width: 380px
+        margin-left: auto
+        padding: 16px 20px
+        background: #FFFFFF
+        box-shadow: 0px 0px 10px rgba(173, 173, 173, 0.4)
+        position: relative
+        overflow: hidden
+        &-name
+            font-weight: 700
+            font-size: 21px
+            color: $black
+            margin-bottom: 5px
+        &-descr
+            font-size: 15px
+            color: $text_gray
+        &::after
+            content: ''
+            display: block
+            border-left: 35px solid transparent
+            border-right: 35px solid transparent
+            border-top: 35px solid transparent
+            border-bottom: 35px solid #f6f6f6
+            position: absolute
+            top: -30px
+            right: -30px
+            transform: rotate(45deg)
+.stat
+    padding: 78px 0
+    .trust-image
+        &::before
+            display: none
+    &-content
+        background: #FFFFFF
+        box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+        border-radius: 1px
+        padding: 35px 30px
+    &__text
+        color: $text_gray
+        p
+            margin-bottom: 25px
+    &-item
+        &__num
+            font-size: 40px
+            color: $black
+            line-height: 47px
+            margin-bottom: 6px
+
+.history
+    background: #E7E9EC
+    padding: 60px 0
+    .section-title
+        margin-bottom: 25px
+    &__text
+        margin-bottom: 27px
+        color: $text_gray
+    &__logo
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 30px
+        height: calc(100% - 27px)
+        background: $text_blue
+        margin-bottom: 27px
+        position: relative
+        z-index: 1
+        img
+            max-width: 100%
+        &::after
+            content: ''
+            display: block
+            width: calc(100% - 38px)
+            height: 100%
+            position: absolute
+            z-index: -1
+            background: url('../img/about/history-dots.png') center
+    &-item
+        margin-bottom: 27px
+        position: relative
+        height: calc(100% - 27px)
+        overflow: hidden
+        &__title
+            position: absolute
+            background: #fff
+            bottom: 23px
+            right: 20px
+            padding: 8px 15px
+            color: $text_blue
+        img
+            height: 100%
+        &_solid
+            background-color: $text_blue
+            padding: 30px 35px
+            color: #fff
+            font-size: 24px
+.about-map
+    padding: 82px 0
+    background-color: #FFFFFF
+    background-image: url(../img/about/map-big.png)
+    background-position: bottom
+    background-repeat: no-repeat
+    .slider-arrows
+        justify-content: flex-end
+        margin-top: 25px
+    &__subtitle
+        font-weight: 500
+        font-size: 19px
+        color: $black
+        margin-bottom: 17px
+    &__text
+        font-size: 15px
+        color: $text_gray
+    &__button
+        margin-top: 188px
+.spectr
+    padding: 80px 0 90px
+    background: url(../img/about/spectr-bg.jpg) center no-repeat
+    background-size: cover
+    overflow: hidden
+    .section-title
+        margin-bottom: 100px
+    &-content
+        padding-left: 200px
+        position: relative
+        &__inner
+            width: 472px
+            height: 472px
+            border: 4px dashed #FFFFFF
+            border-radius: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            span
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 340px
+                height: 340px
+                background: #FFFFFF
+                box-shadow: 0px 0px 80px rgba(173, 173, 173, 0.4)
+                border-radius: 100%
+                text-align: center
+                padding: 50px
+                font-size: 20px
+                line-height: 30px
+                color: $black
+    &-dot
+        display: flex
+        align-items: center
+        position: absolute
+        &__inner
+            width: 62px
+            height: 62px
+            background: rgba(3, 89, 206, .2)
+            padding: 8px
+            border-radius: 100%
+            position: relative
+            flex-shrink: 0
+            span
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: #fff
+                border-radius: 100%
+                color: $elem_blue
+                font-size: 19px
+                font-weight: 500
+                height: 100%
+                z-index: 2
+                position: relative
+        &__title
+            font-size: 18px
+            color: $text_gray
+            margin-left: 22px
+            max-width: 215px
+        &_first, &_second, &_third, &_fourth
+            .spectr-dot
+                &__inner
+                    order: 2
+                &__title
+                    order: 1
+                    text-align: right
+                    margin-right: 22px
+                    margin-left: 0px
+        &_first
+            top: 12px
+            left: 35px
+        &_second
+            top: 130px
+            left: -50px
+        &_third
+            bottom: 130px
+            left: -50px
+        &_fourth
+            bottom: 12px
+            left: 35px
+        &_fifth
+            bottom: 12px
+            left: 535px
+        &_sixth
+            bottom: 130px
+            left: 625px
+        &_seventh
+            top: 130px
+            left: 625px
+        &_eighth
+            top: 12px
+            left: 535px
